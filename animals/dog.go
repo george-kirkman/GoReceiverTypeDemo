@@ -2,12 +2,14 @@ package animals
 
 import "fmt"
 
+// Dog - This is a Dog! It's a struct type that represents a dog with a name, breed, and age.
 type Dog struct {
 	Name  string `json:"name"`
 	Breed string `json:"breed"`
 	Age   int    `json:"age"`
 }
 
+// NewDog is a factory function that creates a new Dog instance.
 func NewDog(name, breed string, age int) Dog {
 	return Dog{
 		Name:  name,
@@ -16,6 +18,10 @@ func NewDog(name, breed string, age int) Dog {
 	}
 }
 
+// Bark is a method of the Dog type that returns a string about the dog barking.
+// In Go, methods are functions that have a receiver type, which is the type that the method is associated with.
+// The receiver type is specified before the function name, and it allows the method to access the fields of the Dog instance.
+// To invoke this method, you would use a Dog instance followed by a dot and the method name.
 func (d Dog) Bark() string {
 	barkingMessage := fmt.Sprintf("%s says woof woof!", d.Name)
 	return barkingMessage
