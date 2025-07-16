@@ -1,3 +1,5 @@
+// Convention! In Go, package names are usually the same as the directory name.
+// We're in the "animals" folder, so the package name is "animals".
 package animals
 
 import "fmt"
